@@ -1,42 +1,114 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "tailwindcss";
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-weight: 300;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* ============================
+   ANAM — Custom Colour Classes
+   ============================ */
+
+/* MAIN */
+.text-main {
+  color: #4747ee;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.text-main-dark {
+  color: #4747ee;
 }
+
+.text-main-light {
+  color: #4747ee;
+}
+
+.bg-main {
+  background-color: #4747ee;
+}
+
+.bg-main-dark {
+  background-color: #4747ee;
+}
+
+.bg-main-light {
+  background-color: #4747ee;
+}
+
+/* SUPPORT */
+.text-support {
+  color: #1dc71d;
+}
+
+.bg-support {
+  background-color: #1dc71d;
+}
+
+/* DARK */
+.text-dark {
+  color: #111;
+}
+
+.bg-dark {
+  background-color: #111;
+}
+
+/* LIGHT */
+.text-light {
+  color: #fdfdff;
+}
+
+.bg-light {
+  background-color: #fdfdff;
+}
+
+/* GREYS */
+.text-grey-1 {
+  color: #333;
+}
+
+.text-grey-2 {
+  color: #999;
+}
+
+.text-grey-3 {
+  color: #ccc;
+}
+
+.text-grey-4 {
+  color: #eee;
+}
+
+.text-grey-5 {
+  color: #fafafa;
+}
+
+.bg-grey-1 {
+  background-color: #333;
+}
+
+.bg-grey-2 {
+  background-color: #999;
+}
+
+.bg-grey-3 {
+  background-color: #ccc;
+}
+
+.bg-grey-4 {
+  background-color: #eee;
+}
+
+.bg-grey-5 {
+  background-color: #fafafa;
+}
+
+.logo-text {
+  font-family: 'My Soul', cursive;
+}
+
+.transitioning {
+  transition: all 0.5s ease-in-out;
+}
+
+
