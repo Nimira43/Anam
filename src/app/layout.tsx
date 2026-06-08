@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import "./globals.css";
+import './globals.css'
+import Providers from '@/components/Providers'
+import TopNav from '@/components/navbar/TopNav'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -10,7 +12,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Anam',
   description: 'Dating application using Next JS, Hero UI, Prisma and Neon.',
-};
+}
 
 export default function RootLayout({
   children,
@@ -18,10 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={poppins.className}>
-        {children}
+        <Providers>
+          <TopNav />
+          {children}
+        </Providers>
       </body>
     </html>
-  );
+  )
 }
