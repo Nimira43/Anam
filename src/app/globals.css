@@ -20,8 +20,19 @@
   .main-btn {
     @apply !bg-main !text-light hover:!bg-main-dark !rounded;
   }
+
   .main-outline-btn {
     @apply !bg-transparent !text-main border !border-main hover:!text-dark hover:!border-dark !rounded
+  }
+
+  .main-input {
+    @apply border border-grey-3 hover:border-main focus:border-main rounded outline-none transitioning
+  }
+}
+
+@layer components {
+  .vertical-centre {
+    height: calc(100vh - 64px);
   }
 }
 

@@ -24,6 +24,7 @@ module.exports = {
         'grey-3': '#ccc',
         'grey-4': '#eee',
         'grey-5': '#fafafa',
+        'error': '#ef4444',
       }
     },
   },

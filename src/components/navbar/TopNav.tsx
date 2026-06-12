@@ -1,19 +1,22 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem }  from '@heroui/navbar'
+import { Navbar, NavbarBrand, NavbarContent }  from '@heroui/navbar'
 import { Button } from '@heroui/button'
 import Link from 'next/link'
 import { GiAbstract065 } from 'react-icons/gi'
+import NavLink from './NavLink'
 
 export default function TopNav() {
   return (
     <Navbar
       maxWidth='xl'
-      className='bg-grey-4'
+      className='bg-grey-4|'
       classNames={{
         item: [
           'text-lg',
           'text-main',
           'hover:text-dark',
-          'transitioning'
+          'transitioning',
+          'data-[active=true]:text-dark',
+          'data-[active=true]:font-light'
         ]
       }}
     >
@@ -30,24 +33,18 @@ export default function TopNav() {
         </div>
       </NavbarBrand>
       <NavbarContent justify='center'>
-        <NavbarItem
-          as={Link}
+        <NavLink
           href='/members'
-        >
-          Matches
-        </NavbarItem>
-        <NavbarItem
-          as={Link}
+          label='Matches'
+        />
+        <NavLink
           href='/lists'
-        >
-          Lists
-        </NavbarItem>
-        <NavbarItem
-          as={Link}
+          label='Lists'
+        />
+        <NavLink
           href='/messages'
-        >
-          Messages
-        </NavbarItem>
+          label='Messages'
+        />
       </NavbarContent>
       <NavbarContent justify='end'>
         <Button

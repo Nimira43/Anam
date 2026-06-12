@@ -24,7 +24,9 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Providers>
           <TopNav />
-          {children}
+          <main className='container mx-auto'>
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

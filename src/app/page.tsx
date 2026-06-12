@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (   
-    <div className='m-5'>
+    <div>
       Home Page    
     </div>
   )

@@ -1,10 +1,9 @@
-import Link from 'next/link'
+import LoginForm from './LoginForm'
 
 export default function LoginPage() {
   return (
-    <div className='m-5'>
-      <h1>Login Page</h1>
-      <Link href='/'>Home</Link>
+    <div className='flex items-center justify-center vertical-centre'>
+      <LoginForm />
     </div>
   )
 }
