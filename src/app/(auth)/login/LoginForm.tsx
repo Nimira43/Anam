@@ -1,6 +1,8 @@
 'use client'
 
+import { loginSchema, LoginSchema } from '@/lib/schemas/loginSchema'
 import { Button, Card, CardBody, CardHeader } from '@heroui/react'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { GiAbstract065 } from 'react-icons/gi'
 
@@ -12,9 +14,12 @@ export default function LoginForm() {
       errors,
       isValid
     }
-  } = useForm()
+  } = useForm<LoginSchema>({
+    resolver: zodResolver(loginSchema),
+    mode: 'onTouched'
+  })
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: LoginSchema) => {
     console.log(data)
   }
 
@@ -43,10 +48,7 @@ export default function LoginForm() {
               className={
                 `w-full p-3 main-input ${errors.email && 'border-error'}`
               }
-              {...register(
-                'email',
-                {required: 'Email is required.'}
-              )}
+              {...register('email')}
             />
             {errors.email && (
               <p className='text-error text-sm'>
@@ -60,10 +62,7 @@ export default function LoginForm() {
               className={
                 `w-full p-3 main-input ${errors.password && 'border-error'}`
               }
-              {...register(
-                'password',
-                {required: 'Password is required.'}
-              )}
+              {...register('password')}
             />
             {errors.password && (
               <p className='text-error text-sm'>
