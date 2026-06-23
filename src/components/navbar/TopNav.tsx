@@ -8,7 +8,7 @@ export default function TopNav() {
   return (
     <Navbar
       maxWidth='xl'
-      className='bg-grey-4|'
+      className='bg-grey-5 shadow-md'
       classNames={{
         item: [
           'text-lg',

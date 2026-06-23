@@ -1,10 +1,9 @@
-import Link from 'next/link'
+import RegisterForm from './RegisterForm'
 
 export default function RegisterPage() {
   return (
-    <div>
-      <h1>Register Page</h1>
-      <Link href='/'>Home</Link>
+    <div className='flex items-center justify-center vertical-centre'>
+      <RegisterForm />
     </div>
   )
 }
